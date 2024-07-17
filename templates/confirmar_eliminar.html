@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Eliminar Imagen - App Transporte{% endblock %}
+
+{% block content %}
+    <h1>Eliminar Imagen</h1>
+    <p>¿Estás seguro de que quieres eliminar esta imagen?</p>
+    <img src="{{ imagen.imagen.url }}" alt="Imagen de transporte" style="max-width: 200px;">
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Sí, eliminar</button>
+    </form>
+    <a href="{% url 'listar_imagenes' %}">Cancelar</a>
+{% endblock %}

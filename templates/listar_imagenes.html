@@ -1,0 +1,37 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Mis Imágenes</h1>
+    {% if imagenes %}
+        <ul>
+        {% for imagen in imagenes %}
+            <li>
+                <a href="{{ imagen.imagen.url }}" data-fancybox="gallery" data-caption="Fecha: {{ imagen.fecha }}, Conductor: {{ imagen.nombre_conductor }}, Guía: {{ imagen.numero_guia }}">
+                    <img src="{{ imagen.imagen.url }}" alt="Imagen de transporte" style="max-width: 200px;">
+                </a>
+                <p>Fecha: {{ imagen.fecha }}</p>
+                <p>Conductor: {{ imagen.nombre_conductor }}</p>
+                <p>Guía: {{ imagen.numero_guia }}</p>
+                <p>Lugar Carga: {{ imagen.lugar_carga }}</p>
+                <p>Kilometraje: {{ imagen.kilometraje }}</p>
+                <p>Total Carga: {{ imagen.total_carga }}</p>
+                <a href="{% url 'editar_imagen' imagen.pk %}">Editar</a>
+                <a href="{% url 'eliminar_imagen' imagen.pk %}">Eliminar</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No tienes imágenes subidas aún.</p>
+    {% endif %}
+    <a href="{% url 'subir_imagen' %}">Subir nueva imagen</a>
+    {% endblock %}
+
+    {% block extra_js %}
+    <script>
+        Fancybox.bind("[data-fancybox]", {
+            // Opciones de Fancybox aquí
+        });
+    </script>
+{% endblock %}

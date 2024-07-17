@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}App Transporte{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Inicio</a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'listar_imagenes' %}">Mis Imágenes</a>
+            <a href="{% url 'subir_imagen' %}">Subir Imagen</a>
+            <a href="{% url 'logout' %}">Cerrar sesión</a>
+            
+
+        {% else %}
+            <a href="{% url 'login' %}">Iniciar sesión</a>
+            <a href="{% url 'registro' %}">Registrarse</a>
+            <a href="{% url 'logout' %}">Cerrar sesión</a>
+        {% endif %}
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <script src="/static/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
