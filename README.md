@@ -61,3 +61,13 @@ proyecto_transporte/
     ├── .env
     ├── .gitignore
     └── requirements.txt
+
+
+## Despliegue
+Para desplegar este proyecto en un servidor de producción, sigue los pasos para configurar las variables de entorno y utilizar un servidor WSGI como Gunicorn.
+
+Contribuciones
+Las contribuciones son bienvenidas. Por favor, haz un fork del repositorio y envía un pull request.
+
+Licencia
+Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
