@@ -7,14 +7,14 @@ body {
 
 nav {
     background-color: #333;
-    color: white;
+    color: rgb(192, 221, 27);
     padding: 1rem;
 }
 
 nav a {
-    color: white;
+    color: rgb(224, 135, 18);
     text-decoration: none;
-    margin-right: 1rem;
+    margin-right: 5rem;
 }
 
 main {
@@ -38,4 +38,10 @@ button {
     padding: 0.5rem 1rem;
     border: none;
     cursor: pointer;
+}
+.registration-form {
+    margin: 0 auto;
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
 }

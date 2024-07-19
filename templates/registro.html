@@ -2,9 +2,9 @@
 
 {% block content %}
 <h2>Registro de Usuario</h2>
-<form method="post">
+<form method="post" class="form-group">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Registrarse</button>
+    {{ form.as_ul }}
+    <button type="submit" class="btn btn-primary">Registrarse</button>
 </form>
 {% endblock %}
