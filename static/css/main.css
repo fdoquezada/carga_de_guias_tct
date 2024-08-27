@@ -1,13 +1,14 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+   
     margin: 0;
     padding: 0;
 }
 
 nav {
-    background-color: #333;
-    color: rgb(192, 221, 27);
+    background-color: #1a37c6;
+    color: rgb(11, 11, 10);
     padding: 1rem;
 }
 

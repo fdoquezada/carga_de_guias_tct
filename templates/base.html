@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/static/css/main.css">
 </head>
 <body>
-    <nav>
+    <nav >
         <a href="{% url 'home' %}">Inicio</a>
         {% if user.is_authenticated %}
             <a href="{% url 'listar_imagenes' %}">Mis Imágenes</a>
